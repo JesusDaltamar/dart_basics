@@ -78,8 +78,7 @@ void main(List<String> arguments) {
   print("el resultado es: $resultado");
   print("El resultado dos es: $a");
 
-
-/*
+  /*
   📌 EJERCICIO 1: CALCULADORA DE EDAD
 
     ✅ Objetivo:
@@ -93,4 +92,35 @@ void main(List<String> arguments) {
     4️⃣ Mostrar el resultado en un mensaje como: "Tienes X años."
 */
 
+  String nacimiento = "2000";
+  int nacimientoNumber = int.parse(nacimiento);
+  var fechaactual = DateTime.now();
+  int anoActual = fechaactual.year;
+  print("el año actual es $anoActual");
+  int edadFinal = anoActual - nacimientoNumber;
+  print("tienes $edadFinal");
+
+  /*
+    📌 EJERCICIO 2: CALCULADORA DE PROPINA
+
+    ✅ Objetivo:
+    Escribe un programa en Dart que calcule cuánto debe pagar cada persona 
+    después de dividir la cuenta y agregar una propina.
+
+    🔹 Pasos a seguir:
+    1️⃣ Pedir al usuario el total de la cuenta.
+    2️⃣ Pedir el porcentaje de propina a agregar.
+    3️⃣ Calcular el total a pagar sumando la propina.
+    4️⃣ Pedir el número de personas para dividir la cuenta.
+    5️⃣ Calcular cuánto debe pagar cada persona.
+    6️⃣ Mostrar el resultado en pantalla.
+  */
+
+  int totalCuenta = 1000;
+  int porcentaje = 15;
+  num totalpago = totalCuenta + ((porcentaje * totalCuenta) / 100);
+  print ("El porcentaje de servicio es $porcentaje % y el pago total seria $totalpago");
+  int personas = 4;
+  num pagoPersona = totalpago / personas;
+  print("El valor a pagar por persona es: $pagoPersona");
 }
